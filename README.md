@@ -1,10 +1,15 @@
 ### Hello World 👋
 
-![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=dark)](https://github.com/JimouChen/github-readme-stats)
+![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true&hide_border=true)
 
 
+<!-- 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=dark)](https://github.com/JimouChen/github-readme-stats) -->
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark)
+
+
+![](https://img.shields.io/badge/Go-v1.17-blue?style=for-the-badge&logo=go&logoColor=white)
 ![](https://img.shields.io/badge/python-3-orange?style=for-the-badge&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![](https://img.shields.io/badge/Flask-6959cd?style=for-the-badge&logo=flask&logoColor=red)
@@ -14,7 +19,7 @@
 -- --
 
 
- ✨ ✨ 
+### ✨ ✨ 
 
 
 - 🔭 I’m currently working on ...
@@ -67,7 +72,10 @@
 </td></tr></table>  
 
 -- --
-- Visitor Count
+### Visitor Count
 
 
 ![Visitor Count](https://profile-counter.glitch.me/JimouChen/count.svg)
+<div align="center">
+<img src="https://komarev.com/ghpvc/?username=JimouChen&&style=flat-square" align="center" />
+</div> 
