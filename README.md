@@ -6,7 +6,7 @@
 <!-- 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=dark)](https://github.com/JimouChen/github-readme-stats) -->
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark&langs_count=10)
 
 
 ![](https://img.shields.io/badge/Go-v1.17-blue?style=for-the-badge&logo=go&logoColor=white)
@@ -46,10 +46,10 @@
 
 ### Backend  
 <div align="center">  
+<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/go-original.svg" alt="Go" height="50" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/go-original.svg" alt="Go" height="50" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" />  
