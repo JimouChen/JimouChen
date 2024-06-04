@@ -1,6 +1,6 @@
 ### Hello World 👋
 
-![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true&hide_border=true)
+![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true&hide_border=true?count_private=true)
 
 
 <!-- 
