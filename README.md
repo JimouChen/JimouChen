@@ -1,12 +1,12 @@
 ### Hello World 👋
 
 ![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true&hide_border=true)
-
+ 
 
 <!-- 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=dark)](https://github.com/JimouChen/github-readme-stats) -->
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark&langs_count=10&hide=css)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark&langs_count=10&hide=html,css,cmake)
 
 
 ![](https://img.shields.io/badge/Go-v1.17-blue?style=for-the-badge&logo=go&logoColor=white)
