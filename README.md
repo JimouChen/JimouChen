@@ -9,10 +9,10 @@
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark&langs_count=10&hide=html,css,cmake)
 
 
-![](https://img.shields.io/badge/Go-v1.17-blue?style=for-the-badge&logo=go&logoColor=white)
+![](https://img.shields.io/badge/Go-v1.20-blue?style=for-the-badge&logo=go&logoColor=white)
 ![](https://img.shields.io/badge/python-3-orange?style=for-the-badge&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=cplusplus&logoColor=white)
-![](https://img.shields.io/badge/Flask-6959cd?style=for-the-badge&logo=flask&logoColor=red)
+![](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![](https://img.shields.io/badge/PyTorch-ffc125?style=for-the-badge&logo=pytorch&logoColor=orange)
 ![](https://img.shields.io/badge/Docker-009acd?style=for-the-badge&logo=docker&logoColor=white)
 
