@@ -13,6 +13,8 @@
 ![](https://img.shields.io/badge/python-3-orange?style=for-the-badge&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![](https://img.shields.io/badge/Gin-009acd?style=for-the-badge&logo=gin&logoColor=white)
+![](https://img.shields.io/badge/Hertz-blue?style=for-the-badge&logo=ByteDance&logoColor=white)
 ![](https://img.shields.io/badge/PyTorch-ffc125?style=for-the-badge&logo=pytorch&logoColor=orange)
 ![](https://img.shields.io/badge/Docker-009acd?style=for-the-badge&logo=docker&logoColor=white)
 
