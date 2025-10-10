@@ -23,7 +23,6 @@
 
 ### ✨ ✨ 
 
-- 🔭 I’m currently working on HW
 - 🌱 I’m interested in Cython Speed, Async Programming, Backend Frame Design and so on...
 - 👯 I’m looking to collaborate on ...
 - 📫 How to reach me: jmchen1024@gmail.com/neaya1024@qq.com
@@ -72,8 +71,6 @@
 -- --
 ### Visitor Count
 
-
-![Visitor Count](https://profile-counter.glitch.me/JimouChen/count.svg)
 <div align="center">
 <img src="https://komarev.com/ghpvc/?username=JimouChen&&style=flat-square" align="center" />
 </div> 
