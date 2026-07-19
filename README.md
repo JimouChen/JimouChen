@@ -1,13 +1,25 @@
-### Hello World 👋
+<h1 align="center">
+  👋 Hello World, I'm Neaya
+</h1>
 
-![Neaya's Github Stats](https://github-readme-stats.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&count_private=true&hide_border=true)
- 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+🚀"/>
+</p>
 
-<!-- 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=dark)](https://github.com/JimouChen/github-readme-stats) -->
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JimouChen&hide_border=true&layout=compact&theme=dark&langs_count=10&hide=html,css,cmake)
+---
 
+<p align="center">
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github"/>
+
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
+</p>
+
+<p align="center">
+  <img width="790" src="https://streak-stats.demolab.com?user=JimouChen&theme=tokyonight&hide_border=true"/>
+</p>
+
+<div align="center">
 
 ![](https://img.shields.io/badge/Go-v1.20-blue?style=for-the-badge&logo=go&logoColor=white)
 ![](https://img.shields.io/badge/python-3-orange?style=for-the-badge&logo=python&logoColor=white)
@@ -17,6 +29,8 @@
 ![](https://img.shields.io/badge/Hertz-blue?style=for-the-badge&logo=ByteDance&logoColor=white)
 ![](https://img.shields.io/badge/PyTorch-ffc125?style=for-the-badge&logo=pytorch&logoColor=orange)
 ![](https://img.shields.io/badge/Docker-009acd?style=for-the-badge&logo=docker&logoColor=white)
+
+</div>
 
 -- --
 
@@ -30,7 +44,10 @@
 - ⚡ Fun fact: ...
 
 # My Skill Set  
+
+<div align="center">
 <table><tr><td valign="top" width="33%">
+
 
 ### DeepLearning  
 <div align="center">  
@@ -67,8 +84,10 @@
 </div>
 
 </td></tr></table>  
+</div> 
 
 -- --
+
 ### Visitor Count
 
 <div align="center">
