@@ -9,15 +9,38 @@
 
 ---
 
-<p align="center">
-  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=JimouChen&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github"/>
+<!-- STATS:START -->
+<h2 align="center">⚡ GitHub Stats</h2>
 
-  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=JimouChen&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
+<p align="center">
+  <img src="https://img.shields.io/github/stars/JimouChen?style=for-the-badge&logo=star&label=Stars&labelColor=1a1b27&color=e0af68&v=20261007" alt="Stars"/>  
+  <img src="https://img.shields.io/github/repos/JimouChen?style=for-the-badge&logo=git&label=Repos&labelColor=1a1b27&color=7aa2f7&v=20261007" alt="Repos"/>  
+  <img src="https://img.shields.io/github/followers/JimouChen?style=for-the-badge&logo=github&label=Followers&labelColor=1a1b27&color=bb9af7&v=20261007" alt="Followers"/>
 </p>
+
+<p align="center">
+  <img width="620" src="assets/lang_stats.svg?v=20261007" alt="Language distribution"/>
+</p>
+
+<h3 align="center">🌟 Most Starred Repositories</h3>
+
+<div align="center">
+<table>
+<tr><th align="center" width="50%">Repository</th><th align="center" width="50%">Repository</th></tr>
+<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/bing-chat-fxxk"><b>bing-chat-fxxk</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/bing-chat-fxxk?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of bing-chat-fxxk"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/auto-youth-study"><b>auto-youth-study</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/auto-youth-study?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of auto-youth-study"/></td></tr>
+<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/tiny-bbs"><b>tiny-bbs</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/tiny-bbs?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of tiny-bbs"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/hertz-backend-base"><b>hertz-backend-base</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/hertz-backend-base?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of hertz-backend-base"/></td></tr>
+<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/IDEA2021"><b>IDEA2021</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/IDEA2021?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of IDEA2021"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/new-bing-search"><b>new-bing-search</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/new-bing-search?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of new-bing-search"/></td></tr>
+</table>
+</div>
+<!-- STATS:END -->
 
 <p align="center">
   <img width="790" src="https://streak-stats.demolab.com?user=JimouChen&theme=tokyonight&hide_border=true"/>
 </p>
+
+<h3 align="center">📈 Star History</h3>
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JimouChen/bing-chat-fxxk,JimouChen/auto-youth-study,JimouChen/tiny-bbs,JimouChen/hertz-backend-base&type=Date)](https://star-history.com/#JimouChen/bing-chat-fxxk&Date)
 
 <div align="center">
 
@@ -32,7 +55,7 @@
 
 </div>
 
--- --
+---
 
 
 ### ✨ ✨ 
@@ -86,7 +109,7 @@
 </td></tr></table>  
 </div> 
 
--- --
+---
 
 ### Visitor Count
 
