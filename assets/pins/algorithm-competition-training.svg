@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="305" height="100" viewBox="0 0 305 100">
+<rect x="0.5" y="0.5" width="304" height="99" rx="14" fill="#1a1b27" stroke="#2f334d"/>
+<text x="18" y="34" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="14" font-weight="700" fill="#7aa2f7">algorithm-competition-train…</text>
+<text x="18" y="56" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="11" fill="#a9b1d6">Blue Bridge Cup, Leetcode and other alg…</text>
+<circle cx="23" cy="76" r="4.5" fill="#f34b7d"/>
+<text x="34" y="80" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="11.5" fill="#c0caf5">C++</text>
+<g transform="translate(265,70) scale(0.75)"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.2 4.1 13.3l.9-4.3-3.3-3 4.4-.5z" fill="#e0af68"/></g>
+<text x="287" y="80" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12" font-weight="700" fill="#c0caf5">2</text>
+</svg>
