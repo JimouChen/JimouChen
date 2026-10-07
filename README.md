@@ -116,5 +116,5 @@
 ### 👀 Visitor Count
 
 <div align="center">
-<img src="https://komarev.com/ghpvc/?username=JimouChen&style=for-the-badge&color=e0af68" alt="visitor count"/>
+<img src="https://komarev.com/ghpvc/?username=JimouChen&style=plastic&color=e0af68" alt="visitor count"/>
 </div>
