@@ -13,9 +13,7 @@
 <h2 align="center">⚡ GitHub Stats</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/JimouChen?style=for-the-badge&logo=star&label=Stars&labelColor=1a1b27&color=e0af68&v=20261007" alt="Stars"/>  
-  <img src="https://img.shields.io/github/repos/JimouChen?style=for-the-badge&logo=git&label=Repos&labelColor=1a1b27&color=7aa2f7&v=20261007" alt="Repos"/>  
-  <img src="https://img.shields.io/github/followers/JimouChen?style=for-the-badge&logo=github&label=Followers&labelColor=1a1b27&color=bb9af7&v=20261007" alt="Followers"/>
+  <img width="620" src="assets/stats_pills.svg?v=20261007" alt="stars, repos, followers"/>
 </p>
 
 <p align="center">
@@ -24,14 +22,18 @@
 
 <h3 align="center">🌟 Most Starred Repositories</h3>
 
-<div align="center">
-<table>
-<tr><th align="center" width="50%">Repository</th><th align="center" width="50%">Repository</th></tr>
-<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/bing-chat-fxxk"><b>bing-chat-fxxk</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/bing-chat-fxxk?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of bing-chat-fxxk"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/auto-youth-study"><b>auto-youth-study</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/auto-youth-study?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of auto-youth-study"/></td></tr>
-<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/tiny-bbs"><b>tiny-bbs</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/tiny-bbs?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of tiny-bbs"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/hertz-backend-base"><b>hertz-backend-base</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/hertz-backend-base?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of hertz-backend-base"/></td></tr>
-<tr><td align="left" width="50%"><a href="https://github.com/JimouChen/IDEA2021"><b>IDEA2021</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/IDEA2021?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of IDEA2021"/></td><td align="left" width="50%"><a href="https://github.com/JimouChen/new-bing-search"><b>new-bing-search</b></a><br/><img src="https://img.shields.io/github/stars/JimouChen/new-bing-search?style=flat-square&logo=github&label=%E2%AD%90&labelColor=1a1b27&color=e0af68&v=20261007" alt="stars of new-bing-search"/></td></tr>
-</table>
-</div>
+<p align="center">
+  <a href="https://github.com/JimouChen/bing-chat-fxxk"><img width="305" src="assets/pins/bing-chat-fxxk.svg?v=20261007" alt="bing-chat-fxxk"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/auto-youth-study"><img width="305" src="assets/pins/auto-youth-study.svg?v=20261007" alt="auto-youth-study"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/JimouChen/tiny-bbs"><img width="305" src="assets/pins/tiny-bbs.svg?v=20261007" alt="tiny-bbs"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/hertz-backend-base"><img width="305" src="assets/pins/hertz-backend-base.svg?v=20261007" alt="hertz-backend-base"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/JimouChen/IDEA2021"><img width="305" src="assets/pins/IDEA2021.svg?v=20261007" alt="IDEA2021"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/new-bing-search"><img width="305" src="assets/pins/new-bing-search.svg?v=20261007" alt="new-bing-search"/></a>
+</p>
 <!-- STATS:END -->
 
 <p align="center">

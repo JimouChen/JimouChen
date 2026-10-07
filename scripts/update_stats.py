@@ -12,7 +12,6 @@
 import json
 import os
 import re
-import urllib.parse
 import urllib.request
 from datetime import date
 from xml.sax.saxutils import escape
@@ -156,53 +155,107 @@ def render_svg(lang_weights, title="Language Distribution"):
     return "\n".join(parts)
 
 
+# ---------------- 徽章 / 卡片渲染 ----------------
+FONT = "Segoe UI,Ubuntu,Sans-Serif"
+
+
+def _truncate(s, n):
+    s = (s or "").strip()
+    return s if len(s) <= n else s[: n - 1] + "…"
+
+
+# 小图标（16x16 视窗）
+ICON_STAR = '<path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.2 4.1 13.3l.9-4.3-3.3-3 4.4-.5z" fill="{c}"/>'
+ICON_PERSON = ('<circle cx="8" cy="5" r="3" fill="{c}"/>'
+               '<path d="M2.5 14c0-3 2.5-4.5 5.5-4.5S13.5 11 13.5 14z" fill="{c}"/>')
+ICON_DB = ('<ellipse cx="8" cy="4.5" rx="5.5" ry="2.3" fill="none" stroke="{c}" stroke-width="1.6"/>'
+           '<path d="M2.5 4.5v7c0 1.3 2.5 2.3 5.5 2.3s5.5-1 5.5-2.3v-7" '
+           'fill="none" stroke="{c}" stroke-width="1.6"/>')
+
+
+def render_stats_pills(stars, repos_count, followers):
+    """一行三个全圆角胶囊徽章：Stars / Repos / Followers"""
+    PW, PH, GAP = 190, 44, 16
+    W = PW * 3 + GAP * 2 + 18
+    x0 = 9
+    items = [
+        (ICON_STAR, str(stars), "Stars", STAR_COLOR),
+        (ICON_DB, str(repos_count), "Public Repos", TITLE_COLOR),
+        (ICON_PERSON, str(followers), "Followers", "bb9af7"),
+    ]
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{PH + 12}" '
+        f'viewBox="0 0 {W} {PH + 12}">',
+    ]
+    for i, (icon, value, label, color) in enumerate(items):
+        x = x0 + i * (PW + GAP)
+        y = 6
+        parts.append(
+            f'<rect x="{x}" y="{y}" width="{PW}" height="{PH}" rx="{PH // 2}" '
+            f'fill="#{BG}" stroke="#{TRACK_COLOR}"/>')
+        parts.append(f'<g transform="translate({x + 20},{y + 14})">{icon.format(c="#" + color)}</g>')
+        parts.append(
+            f'<text x="{x + 48}" y="{y + 28}" font-family="{FONT}">'
+            f'<tspan font-size="16" font-weight="700" fill="#{TEXT_COLOR}">{value}</tspan>'
+            f'<tspan dx="7" font-size="11.5" fill="#{MUTED_COLOR}">{label}</tspan></text>')
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
+def render_repo_pin(name, stars, lang, desc):
+    """单张仓库卡片：名称 / 描述 / 语言圆点 / star 数"""
+    W, H = 305, 100
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+        f'viewBox="0 0 {W} {H}">',
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="14" '
+        f'fill="#{BG}" stroke="#{TRACK_COLOR}"/>',
+        f'<text x="18" y="34" font-family="{FONT}" font-size="14" font-weight="700" '
+        f'fill="#{TITLE_COLOR}">{escape(_truncate(name, 28))}</text>',
+    ]
+    if desc:
+        parts.append(
+            f'<text x="18" y="56" font-family="{FONT}" font-size="11" '
+            f'fill="#{MUTED_COLOR}">{escape(_truncate(desc, 40))}</text>')
+
+    # 底部：语言圆点 + 名称
+    parts.append(f'<circle cx="23" cy="76" r="4.5" fill="#{lang_color(lang)}"/>')
+    parts.append(
+        f'<text x="34" y="80" font-family="{FONT}" font-size="11.5" '
+        f'fill="#{TEXT_COLOR}">{escape(_truncate(lang, 16))}</text>')
+
+    # 右下：star 图标 + 数量
+    star_digits = str(stars)
+    tx = W - 18 - len(star_digits) * 7.2
+    parts.append(f'<g transform="translate({tx - 15:.0f},70) scale(0.75)">'
+                 f'{ICON_STAR.format(c="#" + STAR_COLOR)}</g>')
+    parts.append(
+        f'<text x="{W - 18}" y="80" text-anchor="end" font-family="{FONT}" '
+        f'font-size="12" font-weight="700" fill="#{TEXT_COLOR}">{star_digits}</text>')
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 # ---------------- README 区块渲染 ----------------
-def star_badge(repo: str, v: str) -> str:
-    q = urllib.parse.urlencode({
-        "style": "flat-square", "logo": "github",
-        "label": "\u2b50", "labelColor": BG, "color": STAR_COLOR, "v": v,
-    })
-    return (f'<img src="https://img.shields.io/github/stars/{repo}?{q}" '
-            f'alt="stars of {repo.split("/")[1]}"/>')
-
-
 def render_readme_block(repos, v):
-    """生成插在 <!-- STATS:START/END --> 之间的完整区块（纯 HTML，GitHub 可直接渲染）
+    """生成插在 <!-- STATS:START/END --> 之间的完整区块（纯 HTML，GitHub 可直接渲染）"""
+    top = sorted(repos, key=lambda r: -r["stargazers_count"])[:TOP_REPO_COUNT]
 
-    数值徽章用 shields.io 动态端点，label 只放文字，避免与动态值重复。
-    """
-    top = sorted(repos, key=lambda r: -r["stargazers_count"])
-    top = [r for r in top if r["stargazers_count"] > 0][:TOP_REPO_COUNT]
+    def pin_img(r):
+        name = r["name"]
+        return (f'<a href="https://github.com/{USER}/{name}">'
+                f'<img width="305" src="assets/pins/{name}.svg?v={v}" alt="{name}"/>'
+                f'</a>')
 
-    def pill(endpoint: str, label: str, color: str, logo: str = "github") -> str:
-        q = urllib.parse.urlencode({
-            "style": "for-the-badge", "logo": logo,
-            "label": label, "labelColor": BG, "color": color, "v": v,
-        })
-        return f'<img src="https://img.shields.io/{endpoint}?{q}" alt="{label}"/>'
-
-    pills = "  \n  ".join([
-        pill(f"github/stars/{USER}", "Stars", "e0af68", "star"),
-        pill(f"github/repos/{USER}", "Repos", "7aa2f7", "git"),
-        pill(f"github/followers/{USER}", "Followers", "bb9af7"),
-    ])
-
-    # top 仓库 2 列网格
     rows = []
     for i in range(0, len(top), 2):
-        cells = []
-        for r in top[i:i + 2]:
-            name = r["name"]
-            cells.append(
-                f'<td align="left" width="50%">'
-                f'<a href="https://github.com/{USER}/{name}"><b>{name}</b></a>'
-                f'<br/>{star_badge(f"{USER}/{name}", v)}</td>')
-        rows.append("<tr>" + "".join(cells) + "</tr>")
+        pair = [pin_img(r) for r in top[i:i + 2]]
+        rows.append('<p align="center">\n  ' + "&nbsp;\n  ".join(pair) + "\n</p>")
 
     return f"""<h2 align="center">⚡ GitHub Stats</h2>
 
 <p align="center">
-  {pills}
+  <img width="620" src="assets/stats_pills.svg?v={v}" alt="stars, repos, followers"/>
 </p>
 
 <p align="center">
@@ -211,12 +264,7 @@ def render_readme_block(repos, v):
 
 <h3 align="center">🌟 Most Starred Repositories</h3>
 
-<div align="center">
-<table>
-<tr><th align="center" width="50%">Repository</th><th align="center" width="50%">Repository</th></tr>
-{chr(10).join(rows)}
-</table>
-</div>"""
+{chr(10).join(rows)}"""
 
 
 def update_readme(block: str) -> bool:
@@ -238,14 +286,34 @@ def main():
 
     repos = fetch_repos(token)
     total_stars, total_forks, own, lang_bytes = aggregate(repos, token)
+    followers = http_json(f"https://api.github.com/users/{USER}", token)["followers"]
     print(f"repos={len(repos)} stars={total_stars} forks={total_forks} "
-          f"own={len(own)} langs={len(lang_bytes)}")
+          f"followers={followers} own={len(own)} langs={len(lang_bytes)}")
 
-    os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
+    asset_dir = os.path.dirname(SVG_PATH)
+    os.makedirs(asset_dir, exist_ok=True)
+
+    # 语言分布图
     with open(SVG_PATH, "w", encoding="utf-8") as f:
         f.write(render_svg(lang_bytes))
 
-    changed = update_readme(render_readme_block(own, v))
+    # 统计胶囊徽章
+    pills_path = os.path.join(asset_dir, "stats_pills.svg")
+    with open(pills_path, "w", encoding="utf-8") as f:
+        f.write(render_stats_pills(total_stars, len(repos), followers))
+
+    # Top 仓库卡片
+    pins_dir = os.path.join(asset_dir, "pins")
+    os.makedirs(pins_dir, exist_ok=True)
+    top = sorted(own, key=lambda r: -r["stargazers_count"])[:TOP_REPO_COUNT]
+    for r in top:
+        pin_path = os.path.join(pins_dir, f"{r['name']}.svg")
+        with open(pin_path, "w", encoding="utf-8") as f:
+            f.write(render_repo_pin(r["name"], r["stargazers_count"],
+                                    r.get("language") or "Other",
+                                    r.get("description")))
+
+    changed = update_readme(render_readme_block(top, v))
     print(f"readme updated: {changed}, version: {v}")
 
 
