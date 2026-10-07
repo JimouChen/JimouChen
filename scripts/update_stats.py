@@ -22,6 +22,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README_PATH = os.path.join(REPO_ROOT, "README.md")
 SVG_PATH = os.path.join(REPO_ROOT, "assets", "lang_stats.svg")
 TOP_REPO_COUNT = 6  # 展示的最多 star 仓库数量
+EXCLUDED_LANGS = {"HTML", "CSS", "SCSS", "Less"}  # 不参与语言排行的标记类语言
 
 # tokyonight 配色
 BG = "1a1b27"
@@ -85,6 +86,8 @@ def aggregate(repos, token=None):
     lang_bytes: dict[str, int] = {}
     for r in own:
         for name, size in http_json(r["languages_url"], token).items():
+            if name in EXCLUDED_LANGS:
+                continue
             lang_bytes[name] = lang_bytes.get(name, 0) + size
     return total_stars, total_forks, own, lang_bytes
 
