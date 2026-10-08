@@ -6,6 +6,34 @@
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+🚀"/>
 </p>
 
+### 💫 About Me
+
+<table>
+<tr>
+<td width="55%" valign="top">
+
+**👨‍💻 Code & Tech**
+
+- 🤖 **AI Coding** · LLM-powered dev workflows
+- 🕷️ **Web Crawling** · scrapers & data pipelines
+- 📈 **Quant Trading** · strategies & backtesting
+- ⚡ **Cython Speed** · **Async Programming**
+- 🏗️ **Backend Framework Design**
+- 👯 Open to collab: crawlers / quant tooling / backend
+
+</td>
+<td width="45%" valign="top">
+
+**🌸 Beyond Code**
+
+- 🍡 深度二次元居民 · devoted ACG lover
+- 📺 季季不落的追番党 · seasonal anime binge-watcher
+- 😄 Pronouns: Developing...
+- 📫 [gmail](mailto:jmchen1024@gmail.com) · [qq](mailto:neaya1024@qq.com)
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -59,16 +87,7 @@
 
 ---
 
-
-### ✨ ✨ 
-
-- 🌱 I’m interested in Cython Speed, Async Programming, Backend Frame Design and so on...
-- 👯 I’m looking to collaborate on ...
-- 📫 How to reach me: jmchen1024@gmail.com/neaya1024@qq.com
-- 😄 Pronouns: Developing...
-- ⚡ Fun fact: ...
-
-# My Skill Set  
+### �️ My Skill Set
 
 <div align="center">
 <table><tr><td valign="top" width="33%">
