@@ -26,8 +26,8 @@
 
 **🌸 Beyond Code**
 
-- 🍡 深度二次元居民 · devoted ACG lover
-- 📺 季季不落的追番党 · seasonal anime binge-watcher
+- 🍡 重度の二次元住民 · devoted ACG lover
+- 📺 毎クール欠かさずアニメを視聴 · seasonal anime binge-watcher
 - 😄 Pronouns: Developing...
 - 📫 [gmail](mailto:jmchen1024@gmail.com) · [qq](mailto:neaya1024@qq.com)
 
@@ -72,63 +72,50 @@
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JimouChen/bing-chat-fxxk,JimouChen/auto-youth-study,JimouChen/tiny-bbs,JimouChen/hertz-backend-base&type=Date)](https://star-history.com/#JimouChen/bing-chat-fxxk&Date)
 
-<div align="center">
-
-![](https://img.shields.io/badge/Go-v1.20-blue?style=for-the-badge&logo=go&logoColor=white)
-![](https://img.shields.io/badge/python-3-orange?style=for-the-badge&logo=python&logoColor=white)
-![](https://img.shields.io/badge/C++-blue?style=for-the-badge&logo=cplusplus&logoColor=white)
-![](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![](https://img.shields.io/badge/Gin-009acd?style=for-the-badge&logo=gin&logoColor=white)
-![](https://img.shields.io/badge/Hertz-blue?style=for-the-badge&logo=ByteDance&logoColor=white)
-![](https://img.shields.io/badge/PyTorch-ffc125?style=for-the-badge&logo=pytorch&logoColor=orange)
-![](https://img.shields.io/badge/Docker-009acd?style=for-the-badge&logo=docker&logoColor=white)
-
-</div>
-
 ---
 
-### �️ My Skill Set
+### 🛠️ Tech Stack
 
 <div align="center">
-<table><tr><td valign="top" width="33%">
 
+<b>💬 Languages & Runtimes</b>
 
-### DeepLearning  
-<div align="center">  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="pytorch" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />  
+<br>
+
+<img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+<img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/>
+
+<br><br>
+
+<b>🤖 Frameworks & AI</b>
+
+<br>
+
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
+<img src="https://img.shields.io/badge/Gin-009acd?style=for-the-badge&logo=gin&logoColor=white" alt="Gin"/>
+<img src="https://img.shields.io/badge/Hertz-2479CC?style=for-the-badge&logo=ByteDance&logoColor=white" alt="Hertz"/>
+<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
+
+<br><br>
+
+<b>⚙️ Infrastructure & DevOps</b>
+
+<br>
+
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+<img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx"/>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab"/>
+
 </div>
-
-</td><td valign="top" width="33%">
-
-
-### Backend  
-<div align="center">  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/go-original.svg" alt="Go" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/springio-icon.svg" alt="Spring" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/redis-original-wordmark.svg" alt="Redis" height="50" />  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-### DevOps  
-<div align="center">  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gitlab.svg" alt="GitLab" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" height="50" />  
-</div>
-
-</td></tr></table>  
-</div> 
 
 ---
 
