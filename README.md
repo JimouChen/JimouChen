@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+🚀"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+🚀"/>
 </p>
 
 ### 💫 About Me
@@ -64,13 +64,19 @@
 </p>
 <!-- STATS:END -->
 
+<h3 align="center">🔥 Streak</h3>
+
 <p align="center">
-  <img width="790" src="https://streak-stats.demolab.com?user=JimouChen&theme=tokyonight&hide_border=true"/>
+  <img width="620" src="https://streak-stats.demolab.com?user=JimouChen&theme=tokyonight&hide_border=true"/>
 </p>
 
 <h3 align="center">📈 Star History</h3>
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JimouChen/bing-chat-fxxk,JimouChen/auto-youth-study,JimouChen/tiny-bbs,JimouChen/hertz-backend-base&type=Date)](https://star-history.com/#JimouChen/bing-chat-fxxk&Date)
+<p align="center">
+  <a href="https://star-history.com/#JimouChen/bing-chat-fxxk,JimouChen/auto-youth-study,JimouChen/tiny-bbs,JimouChen/hertz-backend-base&Date">
+    <img width="620" src="https://api.star-history.com/svg?repos=JimouChen/bing-chat-fxxk,JimouChen/auto-youth-study,JimouChen/tiny-bbs,JimouChen/hertz-backend-base&type=Date" alt="Star History Chart"/>
+  </a>
+</p>
 
 ---
 
