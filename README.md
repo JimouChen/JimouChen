@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+🚀"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=26&pause=1000&color=70A5FD&center=true&vCenter=true&width=700&lines=Backend+Engineer;Go+%7C+Python+%7C+AI+Developer;Building+High+Performance+Systems;Open+Source+Enthusiast+%F0%9F%9A%80"/>
 </p>
 
 ### 💫 About Me
