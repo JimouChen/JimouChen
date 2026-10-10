@@ -41,26 +41,26 @@
 <h2 align="center">⚡ GitHub Stats</h2>
 
 <p align="center">
-  <img width="620" src="assets/stats_pills.svg?v=20261009" alt="stars, repos, followers"/>
+  <img width="620" src="assets/stats_pills.svg?v=20261010" alt="stars, repos, followers"/>
 </p>
 
 <p align="center">
-  <img width="620" src="assets/lang_stats.svg?v=20261009" alt="Language distribution"/>
+  <img width="620" src="assets/lang_stats.svg?v=20261010" alt="Language distribution"/>
 </p>
 
 <h3 align="center">🌟 Most Starred Repositories</h3>
 
 <p align="center">
-  <a href="https://github.com/JimouChen/bing-chat-fxxk"><img width="305" src="assets/pins/bing-chat-fxxk.svg?v=20261009" alt="bing-chat-fxxk"/></a>&nbsp;
-  <a href="https://github.com/JimouChen/auto-youth-study"><img width="305" src="assets/pins/auto-youth-study.svg?v=20261009" alt="auto-youth-study"/></a>
+  <a href="https://github.com/JimouChen/bing-chat-fxxk"><img width="305" src="assets/pins/bing-chat-fxxk.svg?v=20261010" alt="bing-chat-fxxk"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/auto-youth-study"><img width="305" src="assets/pins/auto-youth-study.svg?v=20261010" alt="auto-youth-study"/></a>
 </p>
 <p align="center">
-  <a href="https://github.com/JimouChen/tiny-bbs"><img width="305" src="assets/pins/tiny-bbs.svg?v=20261009" alt="tiny-bbs"/></a>&nbsp;
-  <a href="https://github.com/JimouChen/hertz-backend-base"><img width="305" src="assets/pins/hertz-backend-base.svg?v=20261009" alt="hertz-backend-base"/></a>
+  <a href="https://github.com/JimouChen/tiny-bbs"><img width="305" src="assets/pins/tiny-bbs.svg?v=20261010" alt="tiny-bbs"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/hertz-backend-base"><img width="305" src="assets/pins/hertz-backend-base.svg?v=20261010" alt="hertz-backend-base"/></a>
 </p>
 <p align="center">
-  <a href="https://github.com/JimouChen/new-bing-search"><img width="305" src="assets/pins/new-bing-search.svg?v=20261009" alt="new-bing-search"/></a>&nbsp;
-  <a href="https://github.com/JimouChen/algorithm-competition-training"><img width="305" src="assets/pins/algorithm-competition-training.svg?v=20261009" alt="algorithm-competition-training"/></a>
+  <a href="https://github.com/JimouChen/new-bing-search"><img width="305" src="assets/pins/new-bing-search.svg?v=20261010" alt="new-bing-search"/></a>&nbsp;
+  <a href="https://github.com/JimouChen/algorithm-competition-training"><img width="305" src="assets/pins/algorithm-competition-training.svg?v=20261010" alt="algorithm-competition-training"/></a>
 </p>
 <!-- STATS:END -->
 
