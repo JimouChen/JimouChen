@@ -130,5 +130,5 @@
 ### 👀 Visitor Count
 
 <div align="center">
-<img width="200" src="https://komarev.com/ghpvc/?username=JimouChen&style=plastic&color=e0af68" alt="visitor count"/>
+<img width="200" src="assets/visitor_badge.svg" alt="visitor count"/>
 </div>
