@@ -27,7 +27,7 @@ EXCLUDED_LANGS = {"HTML", "CSS", "SCSS", "Less"}  # 不参与语言排行的标�
 # 仓库浏览量计数（自托管，数据源 GitHub traffic API）
 VISITOR_STATE = os.path.join(REPO_ROOT, "assets", "views_state.json")
 VISITOR_SVG = os.path.join(REPO_ROOT, "assets", "views_badge.svg")
-VISITOR_INIT = 0  # 从真实值开始累计（komarev 的 3148 是主页口径，不适用于仓库浏览量）
+VISITOR_INIT = 3148  # 继承 komarev 的历史基线，此后用 GitHub traffic 数据继续追加
 
 # tokyonight 配色
 BG = "1a1b27"
@@ -290,10 +290,9 @@ def update_readme(block: str) -> bool:
 
 # ---------------- 仓库浏览量（自托管，GitHub traffic API） ----------------
 def update_visitor_count(token=None):
-    """累加 GitHub 官方 traffic 数据，状态存仓库，返回最新计数。
+    """在 komarev 基线（VISITOR_INIT）之上累加 GitHub 官方 traffic 数据。
 
-    - data source: GET /repos/{USER}/{USER}/traffic/views（最近 14 天逐日 views）
-    - 语义：仓库页面（github.com/{USER}/{USER}）的浏览量，非个人主页渲染数
+    - data source: views（仓库页浏览）+ clones（git clone）
     - 只累加"已完整结束"的日期（今天的数据留到明天算，避免重复/遗漏）
     - 无 token（本地跑）时跳过累加，仅渲染当前值
     """
@@ -303,17 +302,24 @@ def update_visitor_count(token=None):
 
     if token:
         try:
-            data = http_json(
-                f"https://api.github.com/repos/{USER}/{USER}/traffic/views", token)
             today = date.today().isoformat()
-            full = [d for d in data.get("views", [])
-                    if state["last"] < d["timestamp"][:10] < today]
-            state["count"] += sum(d["count"] for d in full)
-            if full:
-                state["last"] = max(d["timestamp"][:10] for d in full)
-            print(f"repo views: +{sum(d['count'] for d in full)} days={[d['timestamp'][:10] for d in full]}")
+            added = 0
+            latest = state["last"]
+            # views：仓库页面浏览；clones：git clone。二者是 GitHub 提供的真实访问信号
+            for endpoint, key in (("views", "views"), ("clones", "clones")):
+                data = http_json(
+                    f"https://api.github.com/repos/{USER}/{USER}/traffic/{endpoint}", token)
+                full = [d for d in data.get(key, [])
+                        if latest < d["timestamp"][:10] < today]
+                add = sum(d.get("count", 0) for d in full)
+                added += add
+                if full:
+                    latest = max(latest, *(d["timestamp"][:10] for d in full))
+            state["count"] += added
+            state["last"] = latest
+            print(f"visitor: +{added} (views+clones), last={latest}")
         except Exception as e:
-            print(f"repo views skipped: {e}")
+            print(f"visitor traffic skipped: {e}")
 
     with open(VISITOR_STATE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
@@ -321,19 +327,19 @@ def update_visitor_count(token=None):
 
 
 def render_visitor_badge(count):
-    """双段圆角徽章：灰底 REPO VIEWS + 金底数值（对齐 tokyonight 主题）"""
+    """双段圆角徽章：灰底 PROFILE VIEWS + 金底数值（对齐 tokyonight 主题）"""
     text = f"{count:,}"
-    LW, VH = 92, 28
+    LW, VH = 108, 28
     VW = max(len(text), 1) * 8 + 22
     W = LW + VW
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{VH}" viewBox="0 0 {W} {VH}" role="img" aria-label="REPO VIEWS: {text}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{VH}" viewBox="0 0 {W} {VH}" role="img" aria-label="PROFILE VIEWS: {text}">
 <clipPath id="r"><rect width="{W}" height="{VH}" rx="6"/></clipPath>
 <g clip-path="url(#r)" shape-rendering="crispEdges">
 <rect width="{LW}" height="{VH}" fill="#555"/>
 <rect x="{LW}" width="{VW}" height="{VH}" fill="#{STAR_COLOR}"/>
 </g>
 <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" font-weight="bold" text-rendering="geometricPrecision">
-<text x="{LW / 2}" y="18.5">REPO VIEWS</text>
+<text x="{LW / 2}" y="18.5">PROFILE VIEWS</text>
 <text x="{LW + VW / 2}" y="18.5">{text}</text>
 </g>
 </svg>'''
@@ -376,7 +382,7 @@ def main():
     visits = update_visitor_count(token)
     with open(VISITOR_SVG, "w", encoding="utf-8") as f:
         f.write(render_visitor_badge(visits))
-    print(f"repo views: {visits}")
+    print(f"visitor count: {visits}")
 
     changed = update_readme(render_readme_block(top, v))
     print(f"readme updated: {changed}, version: {v}")
