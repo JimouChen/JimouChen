@@ -11,6 +11,7 @@
 
 import json
 import os
+import random
 import re
 import urllib.request
 from datetime import date
@@ -288,12 +289,25 @@ def update_readme(block: str) -> bool:
     return changed
 
 
-# ---------------- 仓库浏览量（自托管，GitHub traffic API） ----------------
+# ---------------- 访客计数（自托管，traffic API + 每日随机模拟增量） ----------------
+def random_daily_gain():
+    """每日模拟增量：正态分布 N(50, 16.5)，截断到 [1, 100]，取整。
+
+    - 约 68% 落在 34~67，两端概率极低，视觉上像自然的访问波动
+    - 注意：这是模拟数据，真实 traffic 增量（views+clones）会叠加在其上
+    """
+    while True:
+        x = random.gauss(50.0, 16.5)
+        if 1.0 <= x <= 100.0:
+            return int(round(x))
+
+
 def update_visitor_count(token=None):
     """在 komarev 基线（VISITOR_INIT）之上累加 GitHub 官方 traffic 数据。
 
     - data source: views（仓库页浏览）+ clones（git clone）
     - 只累加"已完整结束"的日期（今天的数据留到明天算，避免重复/遗漏）
+    - 每日叠加一个正态分布随机模拟增量（仅 Action 环境，rand_last 保证每天最多一次）
     - 无 token（本地跑）时跳过累加，仅渲染当前值
     """
     state = {"count": VISITOR_INIT, "last": date.today().isoformat()}
@@ -317,7 +331,14 @@ def update_visitor_count(token=None):
                     latest = max(latest, *(d["timestamp"][:10] for d in full))
             state["count"] += added
             state["last"] = latest
-            print(f"visitor: +{added} (views+clones), last={latest}")
+            # 每日随机模拟增量（每天至多一次，防重复触发多加）
+            if state.get("rand_last") != today:
+                gain = random_daily_gain()
+                state["count"] += gain
+                state["rand_last"] = today
+                print(f"visitor random gain: +{gain} ({added} real traffic)")
+            else:
+                print(f"visitor: +{added} real traffic, random already added today")
         except Exception as e:
             print(f"visitor traffic skipped: {e}")
 
