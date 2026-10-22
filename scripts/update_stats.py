@@ -24,10 +24,10 @@ SVG_PATH = os.path.join(REPO_ROOT, "assets", "lang_stats.svg")
 TOP_REPO_COUNT = 6  # 展示的最多 star 仓库数量
 EXCLUDED_LANGS = {"HTML", "CSS", "SCSS", "Less"}  # 不参与语言排行的标记类语言
 
-# 访问计数（自托管，不依赖任何外部徽章服务）
-VISITOR_STATE = os.path.join(REPO_ROOT, "assets", "visitor_state.json")
-VISITOR_SVG = os.path.join(REPO_ROOT, "assets", "visitor_badge.svg")
-VISITOR_INIT = 3148  # 继承 komarev 的历史计数，保证数值连续
+# 仓库浏览量计数（自托管，数据源 GitHub traffic API）
+VISITOR_STATE = os.path.join(REPO_ROOT, "assets", "views_state.json")
+VISITOR_SVG = os.path.join(REPO_ROOT, "assets", "views_badge.svg")
+VISITOR_INIT = 0  # 从真实值开始累计（komarev 的 3148 是主页口径，不适用于仓库浏览量）
 
 # tokyonight 配色
 BG = "1a1b27"
@@ -288,11 +288,12 @@ def update_readme(block: str) -> bool:
     return changed
 
 
-# ---------------- 访问计数（自托管） ----------------
+# ---------------- 仓库浏览量（自托管，GitHub traffic API） ----------------
 def update_visitor_count(token=None):
     """累加 GitHub 官方 traffic 数据，状态存仓库，返回最新计数。
 
     - data source: GET /repos/{USER}/{USER}/traffic/views（最近 14 天逐日 views）
+    - 语义：仓库页面（github.com/{USER}/{USER}）的浏览量，非个人主页渲染数
     - 只累加"已完整结束"的日期（今天的数据留到明天算，避免重复/遗漏）
     - 无 token（本地跑）时跳过累加，仅渲染当前值
     """
@@ -310,9 +311,9 @@ def update_visitor_count(token=None):
             state["count"] += sum(d["count"] for d in full)
             if full:
                 state["last"] = max(d["timestamp"][:10] for d in full)
-            print(f"visitor: +{sum(d['count'] for d in full)} days={[d['timestamp'][:10] for d in full]}")
+            print(f"repo views: +{sum(d['count'] for d in full)} days={[d['timestamp'][:10] for d in full]}")
         except Exception as e:
-            print(f"visitor traffic skipped: {e}")
+            print(f"repo views skipped: {e}")
 
     with open(VISITOR_STATE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
@@ -320,19 +321,19 @@ def update_visitor_count(token=None):
 
 
 def render_visitor_badge(count):
-    """双段圆角徽章：灰底 VISITOR COUNT + 金底数值（对齐 tokyonight 主题）"""
+    """双段圆角徽章：灰底 REPO VIEWS + 金底数值（对齐 tokyonight 主题）"""
     text = f"{count:,}"
-    LW, VH = 122, 28
-    VW = len(text) * 8 + 22
+    LW, VH = 92, 28
+    VW = max(len(text), 1) * 8 + 22
     W = LW + VW
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{VH}" viewBox="0 0 {W} {VH}" role="img" aria-label="VISITOR COUNT: {text}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{VH}" viewBox="0 0 {W} {VH}" role="img" aria-label="REPO VIEWS: {text}">
 <clipPath id="r"><rect width="{W}" height="{VH}" rx="6"/></clipPath>
 <g clip-path="url(#r)" shape-rendering="crispEdges">
 <rect width="{LW}" height="{VH}" fill="#555"/>
 <rect x="{LW}" width="{VW}" height="{VH}" fill="#{STAR_COLOR}"/>
 </g>
 <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" font-weight="bold" text-rendering="geometricPrecision">
-<text x="{LW / 2}" y="18.5">VISITOR COUNT</text>
+<text x="{LW / 2}" y="18.5">REPO VIEWS</text>
 <text x="{LW + VW / 2}" y="18.5">{text}</text>
 </g>
 </svg>'''
@@ -375,7 +376,7 @@ def main():
     visits = update_visitor_count(token)
     with open(VISITOR_SVG, "w", encoding="utf-8") as f:
         f.write(render_visitor_badge(visits))
-    print(f"visitor count: {visits}")
+    print(f"repo views: {visits}")
 
     changed = update_readme(render_readme_block(top, v))
     print(f"readme updated: {changed}, version: {v}")

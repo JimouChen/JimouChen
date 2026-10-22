@@ -127,8 +127,8 @@
 
 ---
 
-### 👀 Visitor Count
+### 📊 Repository Views
 
 <div align="center">
-<img width="200" src="assets/visitor_badge.svg" alt="visitor count"/>
+<img src="assets/views_badge.svg" alt="repository views"/>
 </div>
