@@ -308,39 +308,46 @@ def update_visitor_count(token=None):
     - data source: views（仓库页浏览）+ clones（git clone）
     - 只累加"已完整结束"的日期（今天的数据留到明天算，避免重复/遗漏）
     - 每日叠加一个正态分布随机模拟增量（仅 Action 环境，rand_last 保证每天最多一次）
+    - traffic API 对 Actions 内置 GITHUB_TOKEN 固定 403，随机增量不依赖它，
+      必须放在 traffic 的 try/except 之外，否则会被一起跳过
     - 无 token（本地跑）时跳过累加，仅渲染当前值
     """
     state = {"count": VISITOR_INIT, "last": date.today().isoformat()}
     if os.path.exists(VISITOR_STATE):
         state = json.load(open(VISITOR_STATE, encoding="utf-8"))
 
+    today = date.today().isoformat()
+
     if token:
+        # 真实流量累加：403（内置 token 权限不足）时只跳过这部分
         try:
-            today = date.today().isoformat()
             added = 0
             latest = state["last"]
             # views：仓库页面浏览；clones：git clone。二者是 GitHub 提供的真实访问信号
             for endpoint, key in (("views", "views"), ("clones", "clones")):
                 data = http_json(
                     f"https://api.github.com/repos/{USER}/{USER}/traffic/{endpoint}", token)
+                # 以进入循环前的 state["last"] 为基准，而不是已被 views 推进的 latest，
+                # 否则同一天的 clones 会被过滤掉
                 full = [d for d in data.get(key, [])
-                        if latest < d["timestamp"][:10] < today]
-                add = sum(d.get("count", 0) for d in full)
-                added += add
+                        if state["last"] < d["timestamp"][:10] < today]
+                added += sum(d.get("count", 0) for d in full)
                 if full:
                     latest = max(latest, *(d["timestamp"][:10] for d in full))
             state["count"] += added
             state["last"] = latest
-            # 每日随机模拟增量（每天至多一次，防重复触发多加）
-            if state.get("rand_last") != today:
-                gain = random_daily_gain()
-                state["count"] += gain
-                state["rand_last"] = today
-                print(f"visitor random gain: +{gain} ({added} real traffic)")
-            else:
-                print(f"visitor: +{added} real traffic, random already added today")
+            print(f"visitor: +{added} real traffic")
         except Exception as e:
             print(f"visitor traffic skipped: {e}")
+
+        # 每日随机模拟增量（每天至多一次，防重复触发多加）
+        if state.get("rand_last") != today:
+            gain = random_daily_gain()
+            state["count"] += gain
+            state["rand_last"] = today
+            print(f"visitor random gain: +{gain}")
+        else:
+            print("visitor: random already added today")
 
     with open(VISITOR_STATE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
