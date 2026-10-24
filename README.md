@@ -130,5 +130,5 @@
 ### 👀 Visitor Count
 
 <div align="center">
-<img src="assets/views_badge.svg" alt="visitor count"/>
+<img src="assets/views_badge.svg?v=20261024" alt="visitor count"/>
 </div>

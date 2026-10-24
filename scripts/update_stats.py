@@ -276,13 +276,16 @@ def render_readme_block(repos, v):
 {chr(10).join(rows)}"""
 
 
-def update_readme(block: str) -> bool:
+def update_readme(block: str, v: str) -> bool:
     html = open(README_PATH, encoding="utf-8").read()
     new = f"<!-- STATS:START -->\n{block}\n<!-- STATS:END -->"
     if re.search(r"<!-- STATS:START -->.*?<!-- STATS:END -->", html, re.S):
         updated = re.sub(r"<!-- STATS:START -->.*?<!-- STATS:END -->", new, html, flags=re.S)
     else:
         updated = html + "\n" + new
+    # 访客徽章在 STATS 区块之外，单独刷缓存版本号（camo 会缓存同 URL 的图片）
+    updated = re.sub(r'src="assets/views_badge\.svg(?:\?v=\d+)?"',
+                     f'src="assets/views_badge.svg?v={v}"', updated)
     changed = updated != html
     if changed:
         open(README_PATH, "w", encoding="utf-8").write(updated)
@@ -412,7 +415,7 @@ def main():
         f.write(render_visitor_badge(visits))
     print(f"visitor count: {visits}")
 
-    changed = update_readme(render_readme_block(top, v))
+    changed = update_readme(render_readme_block(top, v), v)
     print(f"readme updated: {changed}, version: {v}")
 
 
