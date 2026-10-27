@@ -19,6 +19,7 @@
 - 📈 **Quant Trading** · strategies & backtesting
 - ⚡ **Cython Speed** · **Async Programming**
 - 🏗️ **Backend Framework Design**
+- 🍎 **iOS App Development** · Swift & SwiftUI
 - 👯 Open to collab: crawlers / quant tooling / backend
 
 </td>
