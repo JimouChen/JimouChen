@@ -2,18 +2,18 @@
 <rect x="0.5" y="0.5" width="619" height="373" rx="12" fill="#1a1b27" stroke="#2f334d"/>
 <text x="25" y="36" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="16" font-weight="600" fill="#7aa2f7">Language Distribution</text>
 <rect x="25.0" y="58" width="207.4" height="14" rx="7.0" fill="#3572A5" fill-opacity="0.9"/>
-<rect x="232.4" y="58" width="107.2" height="14" rx="7.0" fill="#f34b7d" fill-opacity="0.9"/>
+<rect x="232.4" y="58" width="107.1" height="14" rx="7.0" fill="#f34b7d" fill-opacity="0.9"/>
 <rect x="339.5" y="58" width="71.1" height="14" rx="7.0" fill="#00ADD8" fill-opacity="0.9"/>
 <rect x="410.6" y="58" width="66.0" height="14" rx="7.0" fill="#f1e05a" fill-opacity="0.9"/>
 <rect x="476.6" y="58" width="59.3" height="14" rx="7.0" fill="#41b883" fill-opacity="0.9"/>
-<rect x="536.0" y="58" width="21.1" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
+<rect x="535.9" y="58" width="21.1" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
 <rect x="557.1" y="58" width="12.8" height="14" rx="7.0" fill="#3178c6" fill-opacity="0.9"/>
 <rect x="569.8" y="58" width="10.0" height="14" rx="7.0" fill="#555555" fill-opacity="0.9"/>
 <rect x="579.9" y="58" width="15.1" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
 <circle cx="27" cy="114" r="5" fill="#3572A5"/>
 <text x="37" y="118" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Python</text>
 <rect x="190" y="108" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="108" width="126.3" height="11" rx="5.5" fill="#3572A5"/>
+<rect x="190" y="108" width="126.2" height="11" rx="5.5" fill="#3572A5"/>
 <text x="595" y="118" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">36.4%</text>
 <circle cx="27" cy="142" r="5" fill="#f34b7d"/>
 <text x="37" y="146" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">C++</text>
