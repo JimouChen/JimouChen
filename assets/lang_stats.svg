@@ -1,58 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="620" height="374" viewBox="0 0 620 374">
 <rect x="0.5" y="0.5" width="619" height="373" rx="12" fill="#1a1b27" stroke="#2f334d"/>
 <text x="25" y="36" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="16" font-weight="600" fill="#7aa2f7">Language Distribution</text>
-<rect x="25.0" y="58" width="207.4" height="14" rx="7.0" fill="#3572A5" fill-opacity="0.9"/>
-<rect x="232.4" y="58" width="107.1" height="14" rx="7.0" fill="#f34b7d" fill-opacity="0.9"/>
-<rect x="339.5" y="58" width="71.1" height="14" rx="7.0" fill="#00ADD8" fill-opacity="0.9"/>
-<rect x="410.6" y="58" width="66.0" height="14" rx="7.0" fill="#f1e05a" fill-opacity="0.9"/>
-<rect x="476.6" y="58" width="59.3" height="14" rx="7.0" fill="#41b883" fill-opacity="0.9"/>
-<rect x="535.9" y="58" width="21.1" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
-<rect x="557.1" y="58" width="12.8" height="14" rx="7.0" fill="#3178c6" fill-opacity="0.9"/>
-<rect x="569.8" y="58" width="10.0" height="14" rx="7.0" fill="#555555" fill-opacity="0.9"/>
-<rect x="579.9" y="58" width="15.1" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
+<rect x="25.0" y="58" width="200.5" height="14" rx="7.0" fill="#3572A5" fill-opacity="0.9"/>
+<rect x="225.5" y="58" width="103.6" height="14" rx="7.0" fill="#f34b7d" fill-opacity="0.9"/>
+<rect x="329.2" y="58" width="87.6" height="14" rx="7.0" fill="#00ADD8" fill-opacity="0.9"/>
+<rect x="416.7" y="58" width="63.8" height="14" rx="7.0" fill="#f1e05a" fill-opacity="0.9"/>
+<rect x="480.5" y="58" width="57.4" height="14" rx="7.0" fill="#41b883" fill-opacity="0.9"/>
+<rect x="537.9" y="58" width="20.4" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
+<rect x="558.3" y="58" width="12.3" height="14" rx="7.0" fill="#3178c6" fill-opacity="0.9"/>
+<rect x="570.7" y="58" width="9.7" height="14" rx="7.0" fill="#555555" fill-opacity="0.9"/>
+<rect x="580.4" y="58" width="14.6" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
 <circle cx="27" cy="114" r="5" fill="#3572A5"/>
 <text x="37" y="118" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Python</text>
 <rect x="190" y="108" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="108" width="126.2" height="11" rx="5.5" fill="#3572A5"/>
-<text x="595" y="118" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">36.4%</text>
+<rect x="190" y="108" width="122.1" height="11" rx="5.5" fill="#3572A5"/>
+<text x="595" y="118" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">35.2%</text>
 <circle cx="27" cy="142" r="5" fill="#f34b7d"/>
 <text x="37" y="146" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">C++</text>
 <rect x="190" y="136" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="136" width="65.2" height="11" rx="5.5" fill="#f34b7d"/>
-<text x="595" y="146" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">18.8%</text>
+<rect x="190" y="136" width="63.1" height="11" rx="5.5" fill="#f34b7d"/>
+<text x="595" y="146" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">18.2%</text>
 <circle cx="27" cy="170" r="5" fill="#00ADD8"/>
 <text x="37" y="174" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Go</text>
 <rect x="190" y="164" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="164" width="43.3" height="11" rx="5.5" fill="#00ADD8"/>
-<text x="595" y="174" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">12.5%</text>
+<rect x="190" y="164" width="53.3" height="11" rx="5.5" fill="#00ADD8"/>
+<text x="595" y="174" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">15.4%</text>
 <circle cx="27" cy="198" r="5" fill="#f1e05a"/>
 <text x="37" y="202" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">JavaScript</text>
 <rect x="190" y="192" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="192" width="40.2" height="11" rx="5.5" fill="#f1e05a"/>
-<text x="595" y="202" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">11.6%</text>
+<rect x="190" y="192" width="38.8" height="11" rx="5.5" fill="#f1e05a"/>
+<text x="595" y="202" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">11.2%</text>
 <circle cx="27" cy="226" r="5" fill="#41b883"/>
 <text x="37" y="230" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Vue</text>
 <rect x="190" y="220" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="220" width="36.1" height="11" rx="5.5" fill="#41b883"/>
-<text x="595" y="230" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">10.4%</text>
+<rect x="190" y="220" width="34.9" height="11" rx="5.5" fill="#41b883"/>
+<text x="595" y="230" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">10.1%</text>
 <circle cx="27" cy="254" r="5" fill="#8b949e"/>
 <text x="37" y="258" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Astro</text>
 <rect x="190" y="248" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="248" width="12.9" height="11" rx="5.5" fill="#8b949e"/>
-<text x="595" y="258" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">3.7%</text>
+<rect x="190" y="248" width="12.4" height="11" rx="5.5" fill="#8b949e"/>
+<text x="595" y="258" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">3.6%</text>
 <circle cx="27" cy="282" r="5" fill="#3178c6"/>
 <text x="37" y="286" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">TypeScript</text>
 <rect x="190" y="276" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="276" width="7.8" height="11" rx="5.5" fill="#3178c6"/>
+<rect x="190" y="276" width="7.5" height="11" rx="5.5" fill="#3178c6"/>
 <text x="595" y="286" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">2.2%</text>
 <circle cx="27" cy="310" r="5" fill="#555555"/>
 <text x="37" y="314" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">C</text>
 <rect x="190" y="304" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="304" width="6.1" height="11" rx="5.5" fill="#555555"/>
-<text x="595" y="314" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">1.8%</text>
+<rect x="190" y="304" width="5.9" height="11" rx="5.5" fill="#555555"/>
+<text x="595" y="314" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">1.7%</text>
 <circle cx="27" cy="338" r="5" fill="#8b949e"/>
 <text x="37" y="342" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Other</text>
 <rect x="190" y="332" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="332" width="9.2" height="11" rx="5.5" fill="#8b949e"/>
-<text x="595" y="342" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">2.7%</text>
+<rect x="190" y="332" width="8.9" height="11" rx="5.5" fill="#8b949e"/>
+<text x="595" y="342" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">2.6%</text>
 </svg>
