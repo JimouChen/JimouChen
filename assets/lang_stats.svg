@@ -3,9 +3,9 @@
 <text x="25" y="36" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="16" font-weight="600" fill="#7aa2f7">Language Distribution</text>
 <rect x="25.0" y="58" width="200.5" height="14" rx="7.0" fill="#3572A5" fill-opacity="0.9"/>
 <rect x="225.5" y="58" width="103.6" height="14" rx="7.0" fill="#f34b7d" fill-opacity="0.9"/>
-<rect x="329.2" y="58" width="87.6" height="14" rx="7.0" fill="#00ADD8" fill-opacity="0.9"/>
-<rect x="416.7" y="58" width="63.8" height="14" rx="7.0" fill="#f1e05a" fill-opacity="0.9"/>
-<rect x="480.5" y="58" width="57.4" height="14" rx="7.0" fill="#41b883" fill-opacity="0.9"/>
+<rect x="329.0" y="58" width="87.8" height="14" rx="7.0" fill="#00ADD8" fill-opacity="0.9"/>
+<rect x="416.8" y="58" width="63.8" height="14" rx="7.0" fill="#f1e05a" fill-opacity="0.9"/>
+<rect x="480.6" y="58" width="57.3" height="14" rx="7.0" fill="#41b883" fill-opacity="0.9"/>
 <rect x="537.9" y="58" width="20.4" height="14" rx="7.0" fill="#8b949e" fill-opacity="0.9"/>
 <rect x="558.3" y="58" width="12.3" height="14" rx="7.0" fill="#3178c6" fill-opacity="0.9"/>
 <rect x="570.7" y="58" width="9.7" height="14" rx="7.0" fill="#555555" fill-opacity="0.9"/>
@@ -13,7 +13,7 @@
 <circle cx="27" cy="114" r="5" fill="#3572A5"/>
 <text x="37" y="118" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Python</text>
 <rect x="190" y="108" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="108" width="122.1" height="11" rx="5.5" fill="#3572A5"/>
+<rect x="190" y="108" width="122.0" height="11" rx="5.5" fill="#3572A5"/>
 <text x="595" y="118" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">35.2%</text>
 <circle cx="27" cy="142" r="5" fill="#f34b7d"/>
 <text x="37" y="146" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">C++</text>
@@ -23,7 +23,7 @@
 <circle cx="27" cy="170" r="5" fill="#00ADD8"/>
 <text x="37" y="174" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">Go</text>
 <rect x="190" y="164" width="347" height="11" rx="5.5" fill="#2f334d"/>
-<rect x="190" y="164" width="53.3" height="11" rx="5.5" fill="#00ADD8"/>
+<rect x="190" y="164" width="53.4" height="11" rx="5.5" fill="#00ADD8"/>
 <text x="595" y="174" text-anchor="end" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="12.5" fill="#a9b1d6">15.4%</text>
 <circle cx="27" cy="198" r="5" fill="#f1e05a"/>
 <text x="37" y="202" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="13" fill="#c0caf5">JavaScript</text>
